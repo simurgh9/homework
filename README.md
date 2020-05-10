@@ -2,9 +2,7 @@
 
 You may get Latex [here]((https://tug.org/texlive/)) then place the class file `homework.cls` in the same directory as your `*.tex` files. A demo [hw.tex](hw.tex) file has is present in the repository that produces the following [pdf](hw.pdf).
 
-<div align="center">
-![PDF](./media/screenshot.png)
-</div>
+<img src="./media/screenshot.png" align="center" />
 
 ## License
 
