@@ -1,3 +1,8 @@
+%% homework.cls  Copyright (C) 2020  Ahmad Tashfeen
+%% This program comes with ABSOLUTELY NO WARRANTY.
+%% This is free software, and you are welcome to redistribute it
+%% under certain conditions; read file COPYING for more details.
+
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{homework}[2020/05/10 Homework]
 \LoadClass[12pt,oneside]{amsart}
