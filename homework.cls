@@ -29,7 +29,7 @@
 \newcounter{QuestionCounter}
 \stepcounter{QuestionCounter}
 \newenvironment{question}[1][\arabic{QuestionCounter}] {
-  \noindent\textbf{Question #1. }\ignorespaces
+  \vspace*{0.5\baselineskip}\noindent\textbf{Question #1. }\ignorespaces
   \ifnum#1=\value{QuestionCounter}
   \stepcounter{QuestionCounter}\ignorespaces
   \else\fi}{}
