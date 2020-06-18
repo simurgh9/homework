@@ -52,6 +52,9 @@
 \newcommand{\injective}{\hookrightarrow}
 \newcommand{\surjective}{\twoheadrightarrow}
 \newcommand{\bijective}{\hookrightarrow\mathrel{\mspace{-15mu}}\rightarrow}
+\renewcommand{\d}[1][d]{\operatorname{#1}}
+\renewcommand{\vec}[1]{\mathbf{#1}}
+\newcommand{\derivative}[2][x]{\frac{\d #2}{\d #1}}
 \newcommand{\rightfig}[4][0.4] {
   \begin{wrapfigure}{r}{#1\textwidth}
     \centering
