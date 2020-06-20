@@ -1,0 +1,28 @@
+% Tashfeen's symbol macros
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{hwsymb}[2020/06/20 hwsymb]
+
+\RequirePackage{amsmath, amssymb, amsthm, amscd}
+
+% new and renewed commands
+\DeclareRobustCommand{\bold}[1]{\textbf{#1}}    
+\DeclareRobustCommand{\italic}[1]{\textit{#1}}
+\DeclareMathOperator{\D}{d}
+\renewcommand\qedsymbol{$QED.$}
+\renewcommand\labelenumi{\theenumi)} % to make (n) into n)
+\renewcommand{\vec}[1]{\mathbf{#1}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bZ}{\mathbb{Z}}
+\newcommand{\bQ}{\mathbb{Q}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\al}{\alpha}
+\newcommand{\ep}{\varepsilon}
+\newcommand{\p}{\partial}
+\newcommand{\injective}{\hookrightarrow}
+\newcommand{\surjective}{\twoheadrightarrow}
+\newcommand{\bijective}{\hookrightarrow\mathrel{\mspace{-15mu}}\rightarrow}
+\newcommand{\derivative}[2][x]{\frac{\D #2}{\D #1}}
