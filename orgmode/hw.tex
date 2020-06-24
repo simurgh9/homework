@@ -1,4 +1,4 @@
-% Created 2020-06-20 Sat 03:31
+% Created 2020-06-23 Tue 22:42
 % Intended LaTeX compiler: xelatex
 \documentclass{homework}
 \usepackage{graphicx}
@@ -25,20 +25,18 @@
  pdftitle={Homework in Org-mode},
  pdfkeywords={},
  pdfsubject={},
- pdfcreator={Emacs 26.3 (Org mode 9.1.9)}, 
+ pdfcreator={Emacs 26.3 (Org mode 9.3.7)}, 
  pdflang={English}}
 \begin{document}
 
 \maketitle
-This is a demonstration of my homework \LaTeX{} class. It is an extension of the \texttt{amsart} and should have all of its functionality. These are some of the set symbols: \(\bC \supset \bR \supset \bQ \supset \bZ \supset \bN\), then some Greek and other mathematical symbols are, \(\al, \ep, \p, \ra, \Ra, \injective, \surjective, \bijective\). We can also insert multiple figures as seen in figure \ref{khwarizmi}.
+This is a demonstration of my homework \LaTeX{} class. It is an extension of the \texttt{amsart} and should have all of its functionality. These are some of the set symbols: \(\bC \supset \bR \supset \bQ \supset \bZ \supset \bN\), then some Greek and other mathematical symbols are, \(\al, \ep, \p, \ra, \Ra, \injective, \surjective, \bijective\). We can also insert multiple figures as seen in figure \ref{fig:org1c6c388}. There is also an \texttt{org-mode} version of this file\footnote{Tashfeen's \texttt{org-mode} configurations can be found \href{https://github.com/simurgh9/emacs786}{here}.}.
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.3\textwidth]{../media/khwarizmi.png}
-\caption{\label{fig:org95e3976}
-Al`Khwarizmi}
+\caption{\label{fig:org1c6c388}Al`Khwarizmi}
 \end{figure}
-
 
 \begin{question}
 Prove that \(\exists (x,y) \in \bZ\) such that \(x+y = 4\).
@@ -56,9 +54,9 @@ Bonus Question Statement
 
 \lipsum[2]
 \[
-    \zeta(x) = f(g(x)) \quad \text{ then according to the chain rule: } \quad
-    \derivative{\zeta} = \derivative[g]{f} \times \derivative{g}
-  \]
+\zeta(x) = f(g(x)) \quad \text{ then according to the chain rule: } \quad
+\derivative{\zeta} = \derivative[g]{f} \times \derivative{g}
+\]
 \end{bonus}
 
 
@@ -72,7 +70,7 @@ You may write code,
 \begin{question}
 What is the cardinality of Natural Numbers?
 
-It is \(\aleph_0\).
+It is \(\aleph_0\) \cite{arlinghaus1996part}.
 \end{question}
 
 \begin{question}
@@ -98,4 +96,7 @@ Finally the numbered bullets are done with the \texttt{enumerate} package,
 \end{itemize}
 \end{enumerate}
 \end{question}
+
+\bibliographystyle{plain}
+\bibliography{../test/citations}
 \end{document}
