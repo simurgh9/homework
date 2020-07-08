@@ -6,7 +6,7 @@ You may get Latex [here](https://tug.org/texlive/) then place the class  and sty
 
 ## License
 
-`homework.cls, helst.sty, hwsymb.sty` are Latex classes and styles aimed towards people (particularly those in STEM) who want to do their homework in Latex.
+`homework.cls, hwlst.sty, hwsymb.sty` are Latex classes and styles aimed towards people (particularly those in STEM) who want to do their homework in Latex.
 
 Copyright (C) 2020  Ahmad Tashfeen
 
