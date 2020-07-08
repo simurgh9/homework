@@ -1,6 +1,6 @@
 # Homework in Latex
 
-You may get Latex [here](https://tug.org/texlive/) then place the class file [`homework.cls`](homework.cls) in the same directory as your `*.tex` files. A demo [hw.tex](hw.tex) file is present in the repository that produces the following [pdf](hw.pdf).
+You may get Latex [here](https://tug.org/texlive/) then place the class files: [`homework.cls`](./src/homework.cls), [`homework.cls`](./src/hwlst.sty) and [`homework.cls`](./src/hwsymb.sty) in the same directory as your `*.tex` files. A demo [hw.tex](./test/hw.tex) file is present in the repository that produces the following [pdf](./test/hw.pdf).
 
 <img src="./media/screenshot.png" align="center" />
 
