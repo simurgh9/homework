@@ -3,6 +3,10 @@
 %% This is free software, and you are welcome to redistribute it
 %% under certain conditions; read file COPYING for more details.
 
+% Put in /usr/local/texlive/texmf-local/tex/latex/local
+% And then reindex: https://tex.stackexchange.com/q/1137/215221
+
+
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{homework}[2020/06/20 Homework]
 \LoadClass[12pt,oneside]{amsart}
@@ -14,6 +18,7 @@
 \RequirePackage[font=small]{caption} % for caption resizing with wrapfig
 \RequirePackage[caption=false]{subfig}
 \RequirePackage{pgffor} % for pictures and wrappings
+\RequirePackage{ifthen} % for if statements
 
 % latex documentation: https://en.wikibooks.org/wiki/LaTeX
 % em is the horizontal space unit and ex is the vertical
@@ -21,7 +26,6 @@
 % bonus question environment
 \theoremstyle{definition}
 \newtheorem{bonus}{Bonus Question}
-\newtheorem{innercustomthm}{Question}
 \newenvironment{prb}[1] % for custom numbering
   {\renewcommand\theinnercustomthm{#1}\innercustomthm}
   {\endinnercustomthm}
@@ -30,10 +34,12 @@
 \newcounter{QuestionCounter}
 \stepcounter{QuestionCounter}
 \newenvironment{question}[1][\arabic{QuestionCounter}] {
-  \vspace*{0.5\baselineskip}\noindent\textbf{Question #1. }\ignorespaces
-  \ifnum#1=\value{QuestionCounter}
-  \stepcounter{QuestionCounter}\ignorespaces
-  \else\fi}{}
+  \vspace*{0.5\baselineskip}
+  \noindent\textbf{Question #1. }\ignorespaces
+  \ifthenelse{\equal{#1}{\value{QuestionCounter}}}
+    {\stepcounter{QuestionCounter}\ignorespaces}
+    {\ignorespaces}
+  }{}
 
 
 % for right aligned figure
