@@ -4,13 +4,12 @@
 #+DATE: \today
 #+LATEX_HEADER: \class{CS 3141: Prof. Kamil's Algorithm Analysis}
 #+LATEX_HEADER: \address{Bayt El-Hikmah}
-#+LATEX_HEADER: \lstset{language=python}
 #+LATEX_HEADER: \usepackage{lipsum}
 
 This is a demonstration of my homework \LaTeX{} class. It is an extension of the =amsart= and should have all of its functionality. These are some of the set symbols: $\bC \supset \bR \supset \bQ \supset \bZ \supset \bN$, then some Greek and other mathematical symbols are, $\al, \ep, \p, \ra, \Ra, \injective, \surjective, \bijective$. We can also insert multiple figures as seen in figure [[fig:kwarizmi]]. There is also an =org-mode= version of this file[fn:0].
 
+#+NAME: fig:kwarizmi
 #+CAPTION: Al`Khwarizmi
-#+LABEL: fig:kwarizmi
 #+ATTR_LATEX: :width 0.3\textwidth
 [[../media/khwarizmi.png]]
 
@@ -52,7 +51,7 @@ Bonus Question Statement
 Euclidean Algorithm
 
 You may write code,
-\lstinputlisting[language=Python]{../code/sample_code.py}
+\lstinputlisting[language=python, label=euclid, caption=Euclidean Algorithm]{../code/sample_code.py}
 #+END_bonus
 
 #+BEGIN_question
@@ -82,6 +81,23 @@ Finally the numbered bullets are done with the =enumerate= package,
    - /Dogs/
 #+END_question
 
+#+BEGIN_question
+How do we insert in-file code?
+
+Like in listing [[fib-recur]],
+
+#+NAME: fib-recur
+#+CAPTION: Recursive Python function to calculate $n^{th}$ Fibonacci number.
+#+ATTR_LATEX: :options numbers=left
+#+BEGIN_src python :results output
+def fib(n):
+  if n == 0: return 0
+  if n == 1: return 1
+  return fib(n - 1) + fib(n - 2)
+print(fib(20))
+#+END_src
+#+END_question
+
 #+BIBLIOGRAPHY: ../test/citations plain
 
-[fn:0] Tashfeen's =org-mode= configurations can be found [[https://github.com/simurgh9/emacs786][here]].
+[fn:0] Tashfeen's ~org-mode~ configurations can be found [[https://github.com/simurgh9/emacs786][here]].
