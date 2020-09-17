@@ -1,48 +1,50 @@
 %% homework.cls  Copyright (C) 2020  Ahmad Tashfeen
 %% This program comes with ABSOLUTELY NO WARRANTY.
-%% This is free software, and you are welcome to redistribute it
-%% under certain conditions; read file COPYING for more details.
+%% This is free software, and you are welcome to
+%% redistribute it under certain conditions; read
+%% file COPYING for more details.
 
 % Put in /usr/local/texlive/texmf-local/tex/latex/local
-% And then reindex: https://tex.stackexchange.com/q/1137/215221
+% And then re-index, see:
+% tex.stackexchange.com/q/1137/215221
 
+% Latex documentation: https://en.wikibooks.org/wiki/LaTeX
+% 'em' is the horizontal space unit and 'ex' is the vertical
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{homework}[2020/06/20 Homework]
 \LoadClass[12pt,oneside]{amsart}
 
 \RequirePackage[margin=0.5in]{geometry}
-\RequirePackage{hwsymb, hwlst} % by Tashfeen, requires amsmath, amssymb, amsthm, amscd
+\RequirePackage{hwsymb, hwlst} % By Tashfeen
 \RequirePackage{lmodern, enumitem}
 \RequirePackage{graphicx, wrapfig}
-\RequirePackage[font=small]{caption} % for caption resizing with wrapfig
+\RequirePackage[font=small]{caption} % For caption resizing with wrapfig
 \RequirePackage[caption=false]{subfig}
-\RequirePackage{pgffor} % for pictures and wrappings
-\RequirePackage{ifthen} % for if statements
+\RequirePackage{pgffor} % For pictures and wrappings
+\RequirePackage{ifthen} % For if statements
 
-% latex documentation: https://en.wikibooks.org/wiki/LaTeX
-% em is the horizontal space unit and ex is the vertical
 
-% bonus question environment
+% Bonus question environment
 \theoremstyle{definition}
 \newtheorem{bonus}{Bonus Question}
-\newenvironment{prb}[1] % for custom numbering
+
+% DEPRECATED! Was for custom numbering
+\newenvironment{prb}[1]
   {\renewcommand\theinnercustomthm{#1}\innercustomthm}
   {\endinnercustomthm}
 
-% question environment
+% Question command
 \newcounter{QuestionCounter}
-\stepcounter{QuestionCounter}
-\newenvironment{question}[1][\arabic{QuestionCounter}] {
+\newcommand{\question}[1][\arabic{QuestionCounter}] {
+  \def\@currentlabel{#1}
+  \ifthenelse{\equal{#1}{\value{QuestionCounter}}}
+  {\stepcounter{QuestionCounter}}{}
   \vspace*{0.5\baselineskip}
   \noindent\textbf{Question #1. }\ignorespaces
-  \ifthenelse{\equal{#1}{\value{QuestionCounter}}}
-    {\stepcounter{QuestionCounter}\ignorespaces}
-    {\ignorespaces}
-  }{}
+  }
 
-
-% for right aligned figure
+% For right aligned figure
 \newcommand{\rightfig}[4][0.4] {
   \begin{wrapfigure}{r}{#1\textwidth}
     \centering
@@ -55,7 +57,7 @@
   \end{wrapfigure}
 }
 
-% just one or a list of figures
+% Just one or a list of figures
 \newcommand{\fig}[4][0.4]{
   \begin{figure}[hbtp]
     \foreach \elem in {#2} {
@@ -69,24 +71,21 @@
   \end{figure}
 }
 
-% this handles the info tags at the beginning
+% This handles the info tags at the beginning
 \makeatletter
-   % defining new variables
-   \gdef\@class{\empty}
-   \def\author#1{\gdef\@author{#1\\}}
-   \def\class#1{\gdef\@class{#1\\}}
-    \renewcommand{\maketitle} {
-      \bgroup
-        \setlength{\parindent}{0em}
-          \begin{flushleft}
-            \ifx\@author\empty \else \@author\fi
-            \ifx\@class\empty \else \@class\fi
-            \@date
-          \end{flushleft}
-      \egroup
-      \begin{center}
-        \textbf{\@title} \\
-      \end{center}
-      \bigskip
-    }
+  \gdef\@author{\empty}
+  \gdef\@class{\empty}
+  \newcommand{\class}[1]{\gdef\@class{#1}}
+  \renewcommand{\author}[1]{\gdef\@author{#1}}
+  \renewcommand{\maketitle} {\bgroup\setlength{\parindent}{0em}
+    \begin{flushleft}
+      \ifthenelse{\equal{\@author}{\empty}}{}{\@author\\}
+      \ifthenelse{\equal{\@class}{\empty}}{}{\@class\\}
+      \@date
+    \end{flushleft}\egroup
+    \begin{center}
+      \textbf{\@title} \\
+    \end{center}
+    \bigskip
+  }
 \makeatother
