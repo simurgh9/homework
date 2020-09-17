@@ -53,7 +53,6 @@ No, the cardinality of Reals is greater because they are also un-listable (uncou
    - *Cats*
    - /Dogs/
 
-
 * [(Bonus) 1] State chain rule.
 
 Chain Rule:
@@ -62,10 +61,9 @@ Chain Rule:
 \derivative{\zeta} = \derivative[g]{f} \times \derivative{g}
 \]
 
-
 * [(Bonus) 2] Euclidean Algorithm
 
-You may write code as in listing,
+You may write code as in listing \ref{gcd},
 
 \lstinputlisting[language=python, label=gcd, caption=Euclidean Algorithm for Greatest Common Factor]{../code/sample_code.py}
 
