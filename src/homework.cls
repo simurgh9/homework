@@ -24,25 +24,26 @@
 \RequirePackage{pgffor} % For pictures and wrappings
 \RequirePackage{ifthen} % For if statements
 
-
-% Bonus question environment
-\theoremstyle{definition}
-\newtheorem{bonus}{Bonus Question}
-
 % DEPRECATED! Was for custom numbering
 \newenvironment{prb}[1]
   {\renewcommand\theinnercustomthm{#1}\innercustomthm}
   {\endinnercustomthm}
 
 % Question command
-\newcounter{QuestionCounter}
-\newcommand{\question}[1][\arabic{QuestionCounter}] {
+\gdef\@unitname{Question}  
+\newcounter{UnitCounter}
+\newcommand{\setunitname}[1]{\gdef\@unitname{#1}}
+\newcommand{\question}[1][\arabic{UnitCounter}] {
   \def\@currentlabel{#1}
-  \ifthenelse{\equal{#1}{\value{QuestionCounter}}}
-  {\stepcounter{QuestionCounter}}{}
+  \ifthenelse{\equal{#1}{\value{UnitCounter}}}
+  {\stepcounter{UnitCounter}}{}
   \vspace*{0.5\baselineskip}
-  \noindent\textbf{Question #1. }\ignorespaces
+  \noindent\textbf{\@unitname{} #1. }\ignorespaces
   }
+
+% Bonus question environment
+\theoremstyle{definition}
+\newtheorem{bonus}{Bonus \@unitname{}}
 
 % For right aligned figure
 \newcommand{\rightfig}[4][0.4] {
