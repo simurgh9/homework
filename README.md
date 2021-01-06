@@ -13,7 +13,7 @@ We provide,
 
 Here we talk about what we need to get a minimal example up and running. For more,
 
-1. [Symbol shortcut table](./examples/mathjax/test.html)
+1. [Symbol shortcut table](https://tashfeen.org/homework/examples/mathjax/test.html)
 2. [Documentation of the Latex class](./examples/latex/documentation.pdf)
 
 ### Prerequisites
@@ -117,7 +117,7 @@ For markup, you'll need the following script tag: `<script async src="path/to/hw
 </html>
 ```
 
-The latex document above produces the following pdf: [minimal.pdf](./examples/latex/minimal.pdf) and the html file above will look (not exactly but) close to [this](./examples/mathjax/test.html). You can find more example documents in the examples [folder](./examples/). Note that we also have some [Orgmode](https://orgmode.org/) examples, but those require some Emacs configurations in the init. file. I plan on sharing those in future.
+The latex document above produces the following pdf: [minimal.pdf](./examples/latex/minimal.pdf) and the html file above will look (not exactly but) close to [this](https://tashfeen.org/homework/examples/mathjax/test.html). You can find more example documents in the examples [folder](./examples/). Note that we also have some [Orgmode](https://orgmode.org/) examples, but those require some Emacs configurations in the init. file. I plan on sharing those in future.
 
 ## Built With
 
