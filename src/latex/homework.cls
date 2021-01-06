@@ -5,45 +5,47 @@
 %% file COPYING for more details.
 
 % Put in /usr/local/texlive/texmf-local/tex/latex/local
-% And then re-index, see:
-% tex.stackexchange.com/q/1137/215221
-
+% And then re-index, see: tex.stackexchange.com/q/1137/215221
 % Latex documentation: https://en.wikibooks.org/wiki/LaTeX
 % 'em' is the horizontal space unit and 'ex' is the vertical
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{homework}[2020/06/20 Homework]
-\LoadClass[12pt,oneside]{amsart}
-
-\RequirePackage[margin=0.5in]{geometry}
-\RequirePackage{hwsymb, hwlst} % By Tashfeen
-\RequirePackage{lmodern, enumitem}
-\RequirePackage{graphicx, wrapfig}
+\ProvidesClass{homework}[2021/01/01 Homework]
+\DeclareOption{handout}{\PassOptionsToClass{\CurrentOption}{amsart}}
+\ProcessOptions\relax
+\LoadClass[12pt, oneside]{amsart}
+\RequirePackage[margin=0.5in]{geometry} % For margins
+\RequirePackage{lmodern, enumitem, needspace} % Needspace for dynamic line breaking
+\RequirePackage{graphicx, wrapfig, pgffor, ifthen} % For images, wrappings and if statements
+\RequirePackage[normalem]{ulem} % For better underlining and org-mode
 \RequirePackage[font=small]{caption} % For caption resizing with wrapfig
 \RequirePackage[caption=false]{subfig}
-\RequirePackage{pgffor} % For pictures and wrappings
-\RequirePackage{ifthen} % For if statements
-
-% DEPRECATED! Was for custom numbering
-\newenvironment{prb}[1]
-  {\renewcommand\theinnercustomthm{#1}\innercustomthm}
-  {\endinnercustomthm}
+\RequirePackage{hyperref} % For pdf bookmarks, other information and org-mode
+\RequirePackage{hwsymb, hwlst} % By Tashfeen
+\hypersetup {
+  pdfstartview=FitH,
+  colorlinks=true,
+}
 
 % Question command
-\gdef\@unitname{Question}  
+\gdef\@unitname{Question}
 \newcounter{UnitCounter}
 \newcommand{\setunitname}[1]{\gdef\@unitname{#1}}
 \newcommand{\question}[1][\arabic{UnitCounter}] {
   \def\@currentlabel{#1}
   \ifthenelse{\equal{#1}{\value{UnitCounter}}}
   {\stepcounter{UnitCounter}}{}
-  \vspace*{0.5\baselineskip}
+  \setcounter{section}{0}
+  \renewcommand{\thesection}{#1.\arabic{section}}
+  \renewcommand{\theHsection}{#1.\the\value{section}}
+  \addcontentsline{toc}{part}{#1. \@unitname{}}
+  \vspace*{0.5\baselineskip}\needspace{8\baselineskip}
   \noindent\textbf{\@unitname{} #1. }\ignorespaces
-  }
+}
 
 % Bonus question environment
 \theoremstyle{definition}
-\newtheorem{bonus}{Bonus \@unitname{}}
+\newtheorem{bonus}{\@unitname{} (Bonus)}
 
 % For right aligned figure
 \newcommand{\rightfig}[4][0.4] {
