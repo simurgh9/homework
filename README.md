@@ -24,7 +24,7 @@ If you just want to write Markdown or HTML files and want to use the symbols (wi
 
 ### Examples
 
-For Latex, get the homework class and style files and place them in the same directory as your latex document (`*.tex`). Here is a complete valid document.
+For Latex, get the homework class and style files and place them in the same directory as your latex document (`*.tex`). Or, if you want them available globally, [read this](https://tex.stackexchange.com/q/1137/215221). Here is a complete valid document.
 
 ```latex
 \documentclass{homework}
