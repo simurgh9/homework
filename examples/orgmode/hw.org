@@ -7,7 +7,7 @@
 
 * What is this document?
 
-This is a demonstration of my homework \LaTeX{} class. It is an extension of the ~amsart~ and should have all of its functionality. These are some of the set symbols: $\C \supset \R \supset \Q \supset \Z \supset \N \supset \F$, then some Greek and other mathematical symbols are, $\al, \ep, \p, \ra, \Ra, \injective, \surjective, \bijective$. We can also insert multiple figures as seen in figure [[fig:kwarizmi]]. There is also an ~org-mode~ version of this file[fn:0].
+This is a demonstration of my homework \LaTeX{} class. It is an extension of the ~amsart~ and should have all of its functionality. These are some of the set symbols: $\C \supset \R \supset \Q \supset \Z \supset \N \supset \P$, then some Greek and other mathematical symbols are, $\al, \ep, \p, \ra, \Ra, \injective, \surjective, \bijective$. We can also insert multiple figures as seen in figure [[fig:kwarizmi]]. There is also an ~org-mode~ version of this file[fn:0].
 
 #+NAME: fig:kwarizmi
 #+CAPTION: Al`Khwarizmi

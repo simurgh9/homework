@@ -9,7 +9,7 @@
 
 We pretend that equivalence classes are just numbers.
 \[
-  \C \supset \R \supset \Q \supset \Z \supset \N \supset \P \supset (\GF[7] = \modulo[7]) \supset \{\nil\}
+  \C \supset \R \supset \Q \supset \Z \supset \N \supset \P \not\supset (\GF[7] = \modulo[7]) \supset \{\nil\}
 \]
 
 * Give an example element of $\O(n)$.

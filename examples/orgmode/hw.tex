@@ -1,4 +1,4 @@
-% Created 2021-01-05 Tue 22:34
+% Created 2021-01-08 Fri 20:43
 % Intended LaTeX compiler: xelatex
 \documentclass{homework}
         
@@ -20,18 +20,18 @@
 \maketitle
 
 \question What is this document?
-\label{sec:org52d976a}
+\label{sec:org509176b}
 
-This is a demonstration of my homework \LaTeX{} class. It is an extension of the \texttt{amsart} and should have all of its functionality. These are some of the set symbols: \(\C \supset \R \supset \Q \supset \Z \supset \N \supset \F\), then some Greek and other mathematical symbols are, \(\al, \ep, \p, \ra, \Ra, \injective, \surjective, \bijective\). We can also insert multiple figures as seen in figure \ref{fig:org61ffa11}. There is also an \texttt{org-mode} version of this file\footnote{Tashfeen's \texttt{org-mode} configurations can be found \href{https://github.com/simurgh9/emacs786}{here}.}.
+This is a demonstration of my homework \LaTeX{} class. It is an extension of the \texttt{amsart} and should have all of its functionality. These are some of the set symbols: \(\C \supset \R \supset \Q \supset \Z \supset \N \supset \P\), then some Greek and other mathematical symbols are, \(\al, \ep, \p, \ra, \Ra, \injective, \surjective, \bijective\). We can also insert multiple figures as seen in figure \ref{fig:orge3a9243}. There is also an \texttt{org-mode} version of this file\footnote{Tashfeen's \texttt{org-mode} configurations can be found \href{https://github.com/simurgh9/emacs786}{here}.}.
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.2\textwidth]{../../media/khwarizmi.png}
-\caption{\label{fig:org61ffa11}Al`Khwarizmi}
+\caption{\label{fig:orge3a9243}Al`Khwarizmi}
 \end{figure}
 
 \question Prove that square root of two is irrational.
-\label{sec:org0ec0cfc}
+\label{sec:orgaeffa5e}
 
 We show,
 \begin{proof}[Proof by Contradiction]
@@ -41,19 +41,19 @@ Assume that \(\sqrt{2}\) is rational. Then \(\sqrt{2} = p/q\) for some integers 
 \end{proof}
 
 \question What is the cardinality of Natural Numbers?
-\label{sec:org4db6b29}
-\label{orgadc0224}
+\label{sec:org2607152}
+\label{org7b99575}
 
-It is \(\aleph_0\) \cite{arlinghaus1996part}. See also question \ref{org6cf4621}.
+It is \(\aleph_0\) \cite{arlinghaus1996part}. See also question \ref{org2558fc6}.
 
 \question [IV] Is the cardinality of Naturals and Reals the same because they are both infinite?
-\label{sec:org3b68e58}
-\label{org6cf4621}
+\label{sec:orgdcb89aa}
+\label{org2558fc6}
 
-No, the cardinality of Reals is greater because they are also un-listable (uncountable). See also question \ref{orgadc0224}.
+No, the cardinality of Reals is greater because they are also un-listable (uncountable). See also question \ref{org7b99575}.
 
 \question Finally the numbered bullets are done with the \texttt{enumitem} package,
-\label{sec:orgb8dad70}
+\label{sec:org9517362}
 
 \begin{enumerate}
 \item With just bullets,
@@ -64,7 +64,7 @@ No, the cardinality of Reals is greater because they are also un-listable (uncou
 \end{enumerate}
 
 \question [1 (Bonus)] State chain rule.
-\label{sec:orgd736884}
+\label{sec:org7d09f1a}
 
 Chain Rule:
 \[
@@ -73,18 +73,18 @@ Chain Rule:
 \]
 
 \question [2 (Bonus)] Euclidean Algorithm
-\label{sec:orgf81143a}
+\label{sec:org27a9b87}
 
 You may write code as in listing,
 
 \lstinputlisting[language=python, label=gcd, caption=Euclidean Algorithm for Greatest Common Factor]{../../media/sample.py}
 
 \question How do we insert in-file code?
-\label{sec:org318e130}
+\label{sec:orgede3ada}
 
-Like in listing \ref{org1a39eaf},
+Like in listing \ref{org1ec94b2},
 
-\lstset{language=Python,label=org1a39eaf,caption={Recursive Python function to calculate \(n^{th}\) Fibonacci number.},captionpos=b,numbers=none,numbers=left}
+\lstset{language=Python,label=org1ec94b2,caption={Recursive Python function to calculate \(n^{th}\) Fibonacci number.},captionpos=b,numbers=none,numbers=left}
 \begin{lstlisting}
 def fib(n):
   if n == 0: return 0
