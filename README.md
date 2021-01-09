@@ -41,7 +41,7 @@ For Latex, get the homework class and style files and place them in the same dir
 We pretend that equivalence classes are just numbers.
 \[
   \C \supset \R \supset \Q \supset \Z \supset \N \supset
-  \P \supset (\GF[7] = \modulo[7])  \supset \{\nil\}
+  \P \not\supset (\GF[7] = \modulo[7])  \supset \{\nil\}
 \]
 
 \question Give an example element of $\O(n)$.
